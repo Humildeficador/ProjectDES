@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+:root {
+	--orange: #faa916ff;
+	--gray: #6d676e11;
+	--af-white: #edf2f4ff;
+	--black: #1b1b1eff;
+	--red: #96031aff;
+	--cian: #91f9e5ff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	color: var(--black);
+}
+
+body {
+	min-width: 100%;
+	min-height: 100vh;
+	background-color: var(--gray);
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+.h1-produtos {
+	margin-top: 20px;
+}
+
+.container {
+	min-height: 100%;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1em;
+	gap: 1em;
+
+	background-color: var(--af-white);
+}
+
+.link-promocao {
+	cursor: pointer;
+	width: 80%;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: .5em;
+	width: 100%;
+	
+}
+
+.banner {
+	border-radius: 2em;
+	width: 100%;
+}
+
+.menu {
+	display: flex;
+	width: 80%;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 1em;
+	gap: 1em;
+
+	background-color: var(--black);
+}
+
+.menu-items {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12em;
+	padding: .5em 1em;
+	border-radius: .75em;
+
+	text-decoration: none;
+}
+
+.menu-items>li {
+	position: relative;
+	font-weight: 500;
+	color: var(--af-white);
+}
+
+.menu-items>li::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--af-white);
+	border-radius: 1em;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .3s;
+}
+
+.menu-items:hover li::after {
+	transform: scaleY(1);
+	transform-origin: left;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+
+/* formulario */
+.forms {
+	display: none;
+}
+
+.forms.enable {
+	display: block;
+}
+
+.deleteButton,
+.edit {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.forms table>thead>tr>th {
+	font-weight: 700;
+}
+
+.forms table>tbody>tr>th {
+	font-weight: 500;
+}
+
+.forms table, th, td{
+	border:1px solid var(--black);
+	padding: .125em .125em .125em .5em;
+	border-collapse: collapse;
+	font-size: .85em;
+}
+
+.forms th {
+	text-align: initial;
+}
+
+.remove-edit-buttons {
+	display: flex;
+}
+
+footer {
+	font-weight: 500;
+	font-size: 1em;
+	background-color: var(--black);
+	color: var(--af-white);
+	width: 100%;
+	text-align: center;
+}
+
+
+/* edit-wrapper */
+.edit-wrapper {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 1px solid var(--black);
+	max-height: 65em;
+	min-width: 50em;
+	padding: 1em;
+	border-radius: 2em;
+	display: none;
+	flex-direction: column;
+	background-color: var(--af-white);
+}
+
+.edit-wrapper>.title {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.edit-wrapper .input-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.edit-wrapper .input-box input {
+	outline: none;
+	border: 1px solid var(--black);
+	border-radius: .75em;
+	width: 20em;
+	height: 3em;
+	background-color: transparent;
+	padding-left: 1em;
+}
+
+.edit-wrapper .input-box input:read-only{
+	background-color: var(--gray);
+}
+
+.edit-wrapper .input-box label {
+	font-weight: 500;
+}
+
+.box-info-endereco {
+	display: flex;
+	justify-content: space-around;
+	height: 35em;
+}
+
+.box-user-info,
+.box-user-endereco {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.box-user-login {
+	display: flex;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	justify-content: space-around;
+}
+
+.button-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.button-box>button,
+.button-box>a,
+.admin-register-button {
+	width: 15em;
+	height: 3em;
+	font-weight: 500;
+	font-size: 1em;
+	border-radius: 1em;
+	background-color: var(--black);
+	border: 2px solid var(--black);
+	color: var(--af-white);
+	transition: .3s;
+	cursor: pointer;
+}
+
+.button-box>a,
+.admin-register-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-box>button:hover,
+.button-box>a:hover,
+.admin-register-button:hover {
+	background-color: var(--af-white);
+	color: var(--black);
+}
+
+.button-box>button:active,
+.button-box>a:active,
+.admin-register-button:active {
+	transform: scale(1.05);
+}
+
+
+/* admin-register-button */
+.admin-menu{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.admin-register-button {
+	margin-bottom: 1em;
+}

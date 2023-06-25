@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Camisetas Mil Grau</title>
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/content-style.css">
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="link-promocao">
+				<a href="promocao.html">
+					<img src="../assets/img/banner_promocao.png" alt="banner" class="banner">
+				</a>
+			</div>
+			<nav class="menu">
+				<a href="../index.html" class="menu-item">
+					<li>Home</li>
+				</a>
+				<a href="produtos.html" class="menu-item">
+					<li>Produtos</li>
+				</a>
+				<a href="promocao.html" class="menu-item">
+					<li>Promoção</li>
+				</a>
+				<a href="sobre.html" class="menu-item">
+					<li>Sobre</li>
+				</a>
+				<a href="contato.html" class="menu-item">
+					<li>Contato</li>
+				</a>
+				<a href="carrinho.html" class="menu-item">
+					<li>Carrinho</li>
+				</a>
+				<a href="cliente-page/index.html" class="menu-item">
+					<li>Login</li>
+				</a>
+			</nav>
+		</header>
+		<main>
+			<form class="finalizar" action="../index.html">
+
+				<div class="info">
+					<div class="input-group">
+						<div class="input-box">
+							<label for="nome">Nome</label>
+							<input type="text" id="nome" placeholder="Seu nome">
+						</div>
+						<div class="input-box">
+							<label for="sobrenome">Sobrenome</label>
+							<input type="text" id="sobrenome" placeholder="Seu sobrenome">
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-box">
+							<label for="cpf">CPF</label>
+							<input type="text" id="cpf" placeholder="Seu CPF">
+						</div>
+						<div class="input-box">
+							<label for="rg">RG</label>
+							<input type="text" id="rg" placeholder="Seu RG">
+						</div>
+					</div>
+				</div>
+
+				<div class="input-group cartao">
+					<div class="input-box">
+						<label for="cartao">Número do Cartão</label>
+						<input type="text" id="cartao" placeholder="Número do seu cartão">
+					</div>
+					<div class="input-box">
+						<label for="validade">Validade</label>
+						<input type="text" id="validade" placeholder="Validade do cartão">
+					</div>
+					<div class="input-box">
+						<label for="cvc">CVC</label>
+						<input type="text" id="cvc" placeholder="CVC do cartão">
+					</div>
+				</div>
+
+				<div class="input-group endereco">
+					<div class="input-group1">
+						<div class="input-box">
+							<label for="endereco">Endereço</label>
+							<input type="text" id="endereco" placeholder="Rua">
+						</div>
+						<div class="input-box">
+							<label for="cidade">Cidade</label>
+							<input type="text" id="cidade" placeholder="Cidade">
+						</div>
+					</div>
+					<div class="input-group1">
+						<div class="input-box">
+							<label for="uf">UF</label>
+							<input type="text" id="uf" placeholder="Estado">
+						</div>
+						<div class="input-box">
+							<label for="cep">CEP</label>
+							<input type="text" id="cep" placeholder="CEP">
+						</div>
+					</div>
+					<div class="input-group1">
+						<div class="input-box">
+							<label for="numero">Número</label>
+							<input type="text" id="numero" placeholder="Número">
+						</div>
+						<div class="input-box">
+							<label for="complemento">Complemento</label>
+							<input type="text" id="complemento" placeholder="Complemento (se tiver)">
+						</div>
+					</div>
+				</div>
+
+				<button id="finalizar">Confirmar Compra</button>
+			</form>
+
+		</main>
+		<footer>&copy; Camisetas Mil Graul LTDA <br> 2023</footer>
+	</div>
+</body>
+</html>
+<script>
+	const finalizar = document.querySelector('#finalizar')
+
+	finalizar.addEventListener('click', () => {
+		window.alert('Compra concluida com sucesso');
+	})
+</script>

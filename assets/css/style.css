@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+:root {
+	--orange: #faa916ff;
+	--gray: #6d676e11;
+	--af-white: #edf2f4ff;
+	--black: #1b1b1eff;
+	--red: #96031aff;
+	--cian: #91f9e5ff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	color: var(--black);
+}
+
+body {
+	min-width: 100%;
+	min-height: 100vh;
+	background-color: var(--gray);
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+.h1-produtos {
+	margin-top: 20px;
+}
+
+.container {
+	min-height: 100%;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1em;
+	gap: 1em;
+
+	background-color: var(--af-white);
+}
+
+.link-promocao {
+	cursor: pointer;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: .5em;
+	max-width: 80%;
+}
+
+.banner,
+.link-promocao {
+	border-radius: 2em;
+	width: 100%;
+}
+
+.menu {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 1em;
+	gap: 1em;
+
+	background-color: var(--black);
+}
+
+.menu-item {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 10em;
+	padding: .5em 1em;
+	border-radius: .75em;
+
+	text-decoration: none;
+}
+
+.menu-item>li {
+	position: relative;
+	font-weight: 500;
+	color: var(--af-white);
+}
+
+.menu-item>li::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--af-white);
+	border-radius: 1em;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .3s;
+}
+
+.menu-item:hover li::after {
+	transform: scaleY(1);
+	transform-origin: left;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.carrossel {
+	display: flex;
+	gap: 3em;
+	max-width: 75%;
+	padding: 1em 2em;
+	overflow-x: auto;
+	border-radius: 2em;
+}
+
+.carrossel::-webkit-scrollbar {
+	width: .5em;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+	background-color: var(--cian);
+	border-radius: 2em;
+	border: 3px solid var(--black);
+}
+
+.carrossel::-webkit-scrollbar-track {
+	background: var(--black);
+	border-radius: 1em;
+}
+
+.carrossel-item {
+	height: 17em;
+	width: 12em;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.200);
+	background-color: var(--af-white);
+	border-radius: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 2em;
+}
+
+.carrossel-item-camisa {
+	height: 20em;
+	width: 12em;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.200);
+	background-color: var(--af-white);
+	border-radius: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 2em;
+}
+
+.carrossel-item-detalhes {
+	height: 20em;
+	width: 12em;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.200);
+	background-color: var(--af-white);
+	border-radius: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 2em;
+}
+
+.liga-logo {
+	width: 150px;
+	height: 150px;
+	border: 3px solid var(--cian);
+	padding: .5em;
+	border-radius: 2em;
+}
+
+.liga-link {
+	display: flex;
+	gap: .5em;
+	flex-direction: column;
+	align-items: center;
+}
+
+.liga-link>p {
+	font-weight: 500;
+}
+
+.liga-link>button {
+	background-color: var(--cian);
+	border: none;
+	border-radius: .5em;
+	padding: .30em 1em;
+	transition: .3s;
+	font-size: 1em;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.promocao-titulo {
+	font-weight: 900;
+}
+
+.promocao {
+	text-decoration: line-through;
+}
+
+.liga-link>button:hover {
+	transform: scale(1.05);
+}
+
+footer {
+	font-weight: 500;
+	font-size: 1em;
+	background-color: var(--black);
+	color: var(--af-white);
+	width: 100%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1450px) {
+	.container {
+		width: 100%;
+	}
+}

@@ -1,0 +1,45 @@
+CREATE DATABASE camisetasmilgrau;
+
+USE camisetasmilgrau;
+
+CREATE TABLE users (
+	userId INT NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(60) NOT NULL,
+	sobrenome VARCHAR(60) NOT NULL,
+	idade INT(3) NOT NULL,
+	cpf VARCHAR(14) NOT NULL,
+	cel VARCHAR(22) NOT NULL,
+	cep CHAR(8) NOT NULL,
+	rua VARCHAR(60) NOT NULL,
+	numero VARCHAR(10) NOT NULL,
+	complemento VARCHAR(60),
+	bairro VARCHAR(60) NOT NULL,
+	cidade VARCHAR(60)NOT NULL,
+	uf VARCHAR(30) NOT NULL,	
+	email VARCHAR(255) UNIQUE NOT NULL,
+	senha VARCHAR(50) NOT NULL,
+
+	primary key(userId)
+);
+
+CREATE TABLE admin (
+	adminId INT NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(60) NOT NULL,
+	sobrenome VARCHAR(60) NOT NULL,
+	idade INT(3) NOT NULL,
+	cpf VARCHAR(14) NOT NULL,
+	cel VARCHAR(22) NOT NULL,
+	cep CHAR(8) NOT NULL,
+	rua VARCHAR(60) NOT NULL,
+	numero VARCHAR(10) NOT NULL,
+	complemento VARCHAR(60),
+	bairro VARCHAR(60) NOT NULL,
+	cidade VARCHAR(60)NOT NULL,
+	uf VARCHAR(30) NOT NULL,	
+	email VARCHAR(255) UNIQUE NOT NULL,
+	senha VARCHAR(50) NOT NULL,
+
+	primary key(adminId)
+);
+
+INSERT INTO admin (nome, sobrenome, idade, cpf, cel, cep, rua, numero, complemento, bairro, cidade, uf, email, senha) VALUES ('João', 'Leandro', '23', '12345678911', '11968376625', '09840140', 'dos Ébanos', '11', null, 'dos Casas', 'São Bernardo do Campo', 'SP', 'joao@email.com', 'e10adc3949ba59abbe56e057f20f883e')
